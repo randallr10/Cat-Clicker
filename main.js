@@ -14,5 +14,4 @@ clickImage.addEventListener('click', incrementPaws);
 function incrementPaws() {
     paws+=1;
     document.getElementById('playerOwned').innerHTML = paws;
-    alert((![]+[])[+[]]+(![]+[])[+!+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]);
 }
