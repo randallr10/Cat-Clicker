@@ -1,8 +1,13 @@
 //Changeable values//
-let paws = 0;
+let cats = 0;
+let passiveCats = 0;
+let clickValue = 1;
+
 let notationStyle = "compact";
 
-if (paws > 999999999999999) {
+
+
+if (cats > 999999999999999) {
     notationStyle = "scientific";
 }
 
@@ -10,6 +15,8 @@ if (paws > 999999999999999) {
 
 //Unchangeable values//
 const clickImage = document.getElementById('clickableCat');
+
+
 const formatter = new Intl.NumberFormat("en-US", {
     notation: notationStyle,
     maximumFractionDigits: 2
@@ -17,11 +24,12 @@ const formatter = new Intl.NumberFormat("en-US", {
 
 
 //EventListeners//
-clickImage.addEventListener('click', incrementPaws);
+clickImage.addEventListener('click', incrementCats);
+buyCursor.addEventListener('click', buyCursor);
 
 
 //Functions//
-function incrementPaws() {
-    paws+=1;
-    document.getElementById('playerOwned').innerHTML = formatter.format(paws);
+function incrementCats() {
+    cats+=clickValue;
+    document.getElementById('bank').innerHTML = formatter.format(cats);
 }
